@@ -448,7 +448,7 @@ Either a positive integer (number of rows/columns) or a percentage."
 
 (defcustom imenu-list-position 'right
   "Position of the imenu-list buffer.
-Either 'right, 'left, 'above or 'below.  This value is passed
+Either `right', `left', `above` or `below'.  This value is passed
 directly to `split-window'."
   :group 'imenu-list
   :type '(choice (const above)
@@ -675,7 +675,7 @@ ARG is ignored."
     (forward-char))
   ;; (when (= (char-after) ?+)
   ;;   (forward-char 2))
-  (let ((spaces (- (point) (point-at-bol))))
+  (let ((spaces (- (point) (line-beginning-position))))
     (forward-line)
     ;; ignore-errors in case we're at the last line
     (ignore-errors (forward-char spaces))

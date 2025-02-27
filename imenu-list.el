@@ -777,7 +777,7 @@ position."
 position."
   (interactive)
   (end-of-line)
-  (imenu-list-next-heading -2))
+  (imenu-list-next-entry-same-level -2))
 
 (defun imenu-list-up-level ()
   "Move to the parent entry in the list, if there is one."
